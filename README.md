@@ -1,6 +1,7 @@
 # Cooper
 
-Base style and functional layers. Dale Cooper approved.
+*Base style and functional layers. Dale Cooper approved.*
+
 ![Dale Cooper Approved](https://i.imgur.com/ZDWFHnB.jpg "Dale Cooper Approved")
 
 ## What is?
@@ -16,7 +17,6 @@ As a default, there are templates bundled with the build and a local server setu
 
 Run 'gulp' from root
 
+## Test/check elements
 
-## Test elements
-
-If you're updating this repo, to test elements just run 'gulp serve' from the root.
+Run 'gulp serve' from root
