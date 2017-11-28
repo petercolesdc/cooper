@@ -38,6 +38,17 @@
   <p class="text">You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).</p>
   <p class="text">You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).</p>
 
+  <pre><code>
+    $ sudo curl -o /usr/local/bin/dm \
+    https://get.datamesh.io/$(uname -s)/dm
+    $ sudo chmod +x /usr/local/bin/dm
+    $ dm cluster init
+    Installing datamesh server in a container... done.
+    Configuring dm CLI to authenticate to datamesh server... done.
+    Here is your key to add other nodes:
+    https://discovery.datamesh.io/22fd02ea1e89bad78a92c35a2e268044
+    You can use 'dm auth' to get this key later.$</code></pre>
+
   <div class="swatch swatch-example-light"></div>
 
 

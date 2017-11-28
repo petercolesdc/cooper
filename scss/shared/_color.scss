@@ -7,37 +7,3 @@ $dmExample: 				#f98787;
 
 // Greyscales
 $dmExampleMono: 		#181818;
-
-
-// Palate generators
-// usage e.g: color: palette(example);
-$themes: (
-    exampleMono: (
-      base:   $dmExampleMono,
-      light:  lighten($dmExampleMono, 10%),
-      dark:   darken($dmExampleMono, 10%),
-      semi:   rgba($dmExampleMono, 50%)
-    ),
-    example: (
-      base:   $dmExample,
-      light:  lighten($dmExample, 10%),
-      dark:   darken($dmExample, 10%),
-      semi:   rgba($dmExample, 50%)
-    )
-);
-
-// Palette function,
-@function palette($palette, $tone: 'base') {
-    @return map-get(map-get($themes, $palette), $tone);
-}
-
-// @each $name, $color in $themes {
-//   .swatch--#{$name} {
-//     background-color: palette($color);
-//   }
-// }
-
-.swatch {
-  width: 80px;
-  height: 80px;
-}

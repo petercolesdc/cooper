@@ -27,3 +27,19 @@ button {
 svg {
 	max-height: 10000px;
 }
+
+// Reset code / pre blocks to sensible defaults
+pre {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  white-space: pre;
+  hyphens: none;
+  position: relative;
+}
+
+code {
+  font-family: $fontMono;
+  font-size: rem($typeS);
+  line-height: 1.8;
+}

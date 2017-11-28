@@ -13,7 +13,7 @@ var gulp            = require("gulp")
     gulp.task("scss", function () {
       gulp.src("scss/**/*.scss")
         .pipe(sassGlob())
-        .pipe(sass({outputStyle : "compressed"}))
+        .pipe(sass({outputStyle : "expanded"}))
         .pipe(autoprefixer({browsers : ["last 6 versions"]}))
         .pipe(gulp.dest("public/css/"))
     })
