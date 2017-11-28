@@ -26,3 +26,18 @@ $dmScrollbar: 			#2B8CC4;
 $dmError: 					#B10E1E;
 $dmSuccess: 				#00823B;
 $dmAlert: 					#FFBF47;
+
+// Shades
+// usage e.g: color: shade(example, light);
+$shades: (
+    dmPrime: (
+      light:  lighten($dmPrime, 10%),
+      dark:   darken($dmPrime, 10%),
+      semi:   rgba($dmPrime, 50%)
+    )
+);
+
+// Palette function,
+@function shade($palette, $tone) {
+    @return map-get(map-get($shades, $palette), $tone);
+}

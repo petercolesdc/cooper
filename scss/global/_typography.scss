@@ -113,8 +113,30 @@
 .text {
 	@extend %typebaseRoot;
 	font-size: rem($typeDefault);
-	+ .text {
-		margin-top: rem($typeDefault);
+}
+
+%textList {
+	li {
+		@extend %typebaseRoot;
+		font-size: rem($typeDefault);
+	}
+}
+
+.unordered-list {
+	list-style-type: square;
+	@extend %textList;
+	ul {
+		list-style-type: square;
+		padding-left: 2rem;
+	}
+}
+
+.ordered-list {
+	list-style-type: decimal;
+	@extend %textList;
+	ol {
+		list-style-type: decimal;
+		padding-left: 2rem;
 	}
 }
 
@@ -139,19 +161,23 @@
 	h5,h6 {
 		@extend .typeM;
 	}
+	p {
+		margin-top: rem($typeMe);
+	}
 	p,
 	li {
 		@extend .text;
-		margin-bottom: rem($typeDefault);
 		display: block;
-	}
-	li {
-		margin-bottom: rem($typeDefault/2);
 	}
 	ul,
 	ol {
-		margin-top: 0;
-		margin-bottom: rem($typeDefault);
+		margin-top: rem($typeMe);
+	}
+	ul {
+		@extend .unordered-list;
+	}
+	ol {
+		@extend .ordered-list;
 	}
 	img {
 		display: block;
