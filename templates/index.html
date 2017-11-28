@@ -1,0 +1,36 @@
+{% set title = 'Cooper' %}
+{% extends 'layouts/layout.html' %}
+
+{% block content %}
+  <h1 class="typeMasthead typeMasthead_trailer heading">Element tests</h1>
+  <h1>H1: Clean render</h1>
+  <h2>H2: Clean render</h2>
+  <h3>H3: Clean render</h3>
+  <h4>H4: Clean render</h4>
+  <h5>H5: Clean render</h5>
+  <h6>H6: Clean render</h6>
+  <p>P: Clean render: You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).</p>
+  <ul>
+    <li>Unordered: Clean render</li>
+    <li>Unordered: Clean render</li>
+    <li>Unordered: Clean render</li>
+  </ul>
+
+  <ul>
+    <li>Ordered: Clean render</li>
+    <li>Ordered: Clean render</li>
+  </ul>
+
+  <h1 class="typeMasthead heading">Masthead</h1>
+  <h2 class="typeHeadline heading">Headline</h2>
+  <h3 class="typeByline heading">Byline</h3>
+  <h4 class="typeXL heading">XL Heading</h4>
+  <h4 class="typeL heading">L heading</h4>
+  <h5 class="typeMe heading">Median heading</h5>
+  <h5 class="typeM heading">M heading</h5>
+  <h6 class="typeS heading">S heading</h6>
+  <h6 class="typeXS heading">XS heading</h6>
+
+  <p class="text">You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).</p>
+  <p class="text">You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).</p>
+{% endblock %}
