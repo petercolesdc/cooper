@@ -1,12 +1,5 @@
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
 html {
-  //@include sharp-text;
+  @include sharp-text;
   font-size: $remRoot + px;
   @media (max-width: $vpDeviceSafe) {
     -webkit-text-size-adjust: 100%;
@@ -22,7 +15,7 @@ body {
 a {
   color: $dmAction;
   text-decoration: underline $dmAction;
-  @mixin link-active-styles {
+  @include link-active-styles {
     text-decoration: underline $dmActionRespond;
   }
 }

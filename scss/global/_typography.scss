@@ -145,22 +145,6 @@
 // ------------------------------------------------------------------
 
 .typebase {
-	h1, h2, h3, h4, h5, h6 {
-		@extend .heading;
-		margin-top: rem($typeMe*2);
-	}
-	h1 {
-		@extend .typeXL;
-	}
-	h2 {
-		@extend .typeL;
-	}
-	h3,h4 {
-		@extend .typeM;
-	}
-	h5,h6 {
-		@extend .typeM;
-	}
 	p {
 		margin-top: rem($typeMe);
 	}
@@ -179,10 +163,49 @@
 	ol {
 		@extend .ordered-list;
 	}
-	img {
+	img, pre {
 		display: block;
 		margin-top: rem($typeDefault*2);
 		margin-bottom: rem($typeDefault);
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		@extend .heading;
+		margin-top: rem($typeMe*2);
+	}
+	h1 {
+		@extend .typeXL;
+	}
+	h2 {
+		@extend .typeL;
+	}
+	h3,h4 {
+		@extend .typeM;
+	}
+	h5,h6 {
+		@extend .typeM;
+	}
+
+	// Remove next para or list top margin
+	h1 + p,
+	h2 + p,
+	h3 + p,
+	h4 + p,
+	h5 + p,
+	h6 + p,
+	h1 + ol,
+	h2 + ol,
+	h3 + ol,
+	h4 + ol,
+	h5 + ol,
+	h6 + ol,
+	h1 + ul,
+	h2 + ul,
+	h3 + ul,
+	h4 + ul,
+	h5 + ul,
+	h6 + ul {
+		margin-top: 0;
 	}
 
 	// Tear out the initial top margin to allow things to flush together
