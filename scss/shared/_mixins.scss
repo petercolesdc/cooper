@@ -1,3 +1,5 @@
+// mixins
+// NO GLOBAL VARIABLES IN HERE PLEASE
 
 // Box-shadow generator for material depth
 // ------------------------------------------------------------------
@@ -49,41 +51,6 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	//text-rendering: optimizeLegibility;
-}
-
-
-// Consistent spacing
-// ------------------------------------------------------------------
-
-@mixin edgeBufferLeft {
-	left: $bufferSpaceS;
-	@include respond-to($vpRowBufferA) {
-		left: $bufferSpaceM;
-	}
-}
-
-@mixin edgeBufferRight {
-	right: $bufferSpaceS;
-	@include respond-to($vpRowBufferA) {
-		right: $bufferSpaceM;
-	}
-}
-
-// Standard rows
-// ------------------------------------------------------------------
-
-@mixin rowDefault {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: $containerMax;
-	min-width: auto;
-	position: relative;
-	padding-left: $bufferSpaceS;
-	padding-right: $bufferSpaceS;
-	@include respond-to($vpRowBufferA) {
-		padding-left: $bufferSpaceM;
-		padding-right: $bufferSpaceM;
-	}
 }
 
 // Helpers

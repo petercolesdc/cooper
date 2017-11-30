@@ -14,9 +14,21 @@ body {
 
 a {
   color: $dmAction;
-  text-decoration: underline $dmAction;
+  text-decoration: none;
+  transition: background-image linear 0.125s;
+  &:not(.button) {
+    background-image: linear-gradient(
+      to top,
+      rgba($dmAction, 0) 0%,
+      rgba($dmAction, 0.2) 0%,
+      rgba($dmAction, 0.2) 18%,
+      rgba($dmAction, 0) 18%
+    );
+  }
   @include link-active-styles {
-    text-decoration: underline $dmActionRespond;
+    &:not(.button) {
+    
+    }
   }
 }
 
