@@ -292,33 +292,6 @@ button {
   background-color: transparent;
 }
 
-pre {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
-  position: relative;
-  tab-width: 2;
-  overflow-x: auto;
-}
-
-pre:focus, pre:hover {
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-}
-
-code {
-  font-family: monospace;
-  line-height: 1.8;
-}
-
-svg {
-  max-height: 10000px;
-}
-
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -346,6 +319,10 @@ a {
 a:hover, a:focus, a:active {
   -webkit-text-decoration: underline #006435;
           text-decoration: underline #006435;
+}
+
+svg {
+  max-height: 10000px;
 }
 
 a[href^="tel"] {
@@ -599,4 +576,27 @@ a[href^="tel"] {
   font-style: italic;
   font-weight: 700;
   src: local(".SFNSText-BoldItalic"), local(".HelveticaNeueDeskInterface-BoldItalic"), local(".LucidaGrandeUI"), local("Segoe UI Bold Italic"), local("Ubuntu Bold Italic"), local("Roboto-BoldItalic"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+pre {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  position: relative;
+  tab-width: 2;
+  overflow-x: auto;
+}
+
+pre:focus, pre:hover {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+code {
+  font-family: fira-sans, monospace;
+  line-height: 1.8;
 }
