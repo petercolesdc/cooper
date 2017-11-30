@@ -11,7 +11,7 @@
 // Kerning
 // ------------------------------------------------------------------
 
-%kernTight 	{ letter-spacing: -0.1rem; }
+%kernTight 	{ letter-spacing: -0.125rem; font-kerning: normal; }
 %kernLoose 	{ letter-spacing: 0.2rem; }
 
 
@@ -182,8 +182,15 @@
 	h3,h4 {
 		@extend .typeM;
 	}
-	h5,h6 {
-		@extend .typeM;
+	h5 {
+		@extend .typeS;
+		@extend %kernLoose;
+		text-transform: uppercase;
+	}
+	h6 {
+		@extend .typeXS;
+		@extend %kernLoose;
+		text-transform: uppercase;
 	}
 
 	// Remove next para or list top margin

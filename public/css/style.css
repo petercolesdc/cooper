@@ -334,7 +334,7 @@ a[href^="tel"] {
   text-decoration: none;
 }
 
-.typeMasthead, .typeHeadline, .typeByline, .typeXL, .typebase h1, .typeL, .typebase h2, .typeM, .typebase h3, .typebase h4, .typebase h5, .typebase h6, .typeMe, .typeS, .typeXS, .text, .typebase p,
+.typeMasthead, .typeHeadline, .typeByline, .typeXL, .typebase h1, .typeL, .typebase h2, .typeM, .typebase h3, .typebase h4, .typeMe, .typeS, .typebase h5, .typeXS, .typebase h6, .text, .typebase p,
 .typebase li, .unordered-list li, .ordered-list li {
   line-height: 1.8;
   margin-bottom: 0;
@@ -342,7 +342,13 @@ a[href^="tel"] {
 }
 
 .typeMasthead, .typeHeadline, .typeByline {
-  letter-spacing: -0.1rem;
+  letter-spacing: -0.125rem;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+}
+
+.typebase h5, .typebase h6 {
+  letter-spacing: 0.2rem;
 }
 
 .typeMasthead {
@@ -389,7 +395,7 @@ a[href^="tel"] {
   margin-bottom: 1.1rem;
 }
 
-.typeM, .typebase h3, .typebase h4, .typebase h5, .typebase h6 {
+.typeM, .typebase h3, .typebase h4 {
   font-size: 1.8rem;
 }
 
@@ -405,7 +411,7 @@ a[href^="tel"] {
   margin-bottom: 0.9rem;
 }
 
-.typeS {
+.typeS, .typebase h5 {
   font-size: 1.4rem;
 }
 
@@ -413,12 +419,12 @@ a[href^="tel"] {
   margin-bottom: 0.7rem;
 }
 
-.typeXS {
-  font-size: 1.1rem;
+.typeXS, .typebase h6 {
+  font-size: 1.2rem;
 }
 
 .typeXS_trailer {
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.6rem;
 }
 
 .heading, .typebase h1, .typebase h2, .typebase h3, .typebase h4, .typebase h5, .typebase h6 {
@@ -476,6 +482,14 @@ a[href^="tel"] {
 
 .typebase h1, .typebase h2, .typebase h3, .typebase h4, .typebase h5, .typebase h6 {
   margin-top: 3.2rem;
+}
+
+.typebase h5 {
+  text-transform: uppercase;
+}
+
+.typebase h6 {
+  text-transform: uppercase;
 }
 
 .typebase h1 + p,
@@ -666,7 +680,7 @@ code {
 }
 
 .buttonSmall {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 36px;
 }
 
