@@ -110,14 +110,12 @@
 // ------------------------------------------------------------------
 
 .text {
-	@extend %typebaseRoot;
-	font-size: rem($typeDefault);
+	@extend .typeMe;
 }
 
 %textList {
 	li {
-		@extend %typebaseRoot;
-		font-size: rem($typeDefault);
+		@extend .typeMe;
 	}
 }
 
@@ -145,10 +143,8 @@
 
 .typebase {
 	p {
-		margin-top: rem($typeMe);
-	}
-	p {
 		@extend .text;
+		margin-top: rem($typeMe);
 		display: block;
 	}
 	li {

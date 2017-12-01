@@ -334,7 +334,7 @@ a[href^="tel"] {
   text-decoration: none;
 }
 
-.typeMasthead, .typeHeadline, .typeByline, .typeXL, .typebase h1, .typeL, .typebase h2, .typeM, .typebase h3, .typebase h4, .typeMe, .typeS, .typebase h5, .typeXS, .typebase h6, .text, .typebase p, .typebase li, .unordered-list li, .ordered-list li {
+.typeMasthead, .typeHeadline, .typeByline, .typeXL, .typebase h1, .typeL, .typebase h2, .typeM, .typebase h3, .typebase h4, .typeMe, .text, .typebase p, .typebase li, .unordered-list li, .ordered-list li, .typeS, .typebase h5, .typeXS, .typebase h6 {
   line-height: 1.8;
   margin-bottom: 0;
   margin-top: 0;
@@ -401,7 +401,7 @@ a[href^="tel"] {
   margin-bottom: 0.9rem;
 }
 
-.typeMe {
+.typeMe, .text, .typebase p, .typebase li, .unordered-list li, .ordered-list li {
   font-size: 1.6rem;
 }
 
@@ -431,14 +431,6 @@ a[href^="tel"] {
   color: #0B0C0C;
 }
 
-.text, .typebase p, .typebase li {
-  font-size: 1.6rem;
-}
-
-.unordered-list li, .typebase ul li, .ordered-list li, .typebase ol li {
-  font-size: 1.6rem;
-}
-
 .unordered-list, .typebase ul {
   list-style-type: square;
 }
@@ -459,9 +451,6 @@ a[href^="tel"] {
 
 .typebase p {
   margin-top: 1.6rem;
-}
-
-.typebase p {
   display: block;
 }
 
