@@ -147,10 +147,12 @@
 	p {
 		margin-top: rem($typeMe);
 	}
-	p,
-	li {
+	p {
 		@extend .text;
 		display: block;
+	}
+	li {
+		@extend .text;
 	}
 	ul,
 	ol {
@@ -167,7 +169,6 @@
 		margin-top: rem($typeDefault*2);
 		margin-bottom: rem($typeDefault);
 	}
-
 	h1, h2, h3, h4, h5, h6 {
 		@extend .heading;
 		margin-top: rem($typeMe*2);
