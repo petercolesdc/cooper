@@ -18,9 +18,22 @@ It all runs on gulp and inputs and outputs are configured via the gulpfile.js. C
 1. Install [gulp](https://gulpjs.com/) locally if you don't have it
 2. run `npm install` where you need it
 3. run `gulp` to compile assets only
-4. run `gulp serve` to display test set of elements and re-compile everthing at the same time
+4. run `gulp serve` to display test set of elements and re-compile everything at the same time
+5. run `gulp build:icons` to re-build a set of icon when required (see icon generation)
 
-## Starting a project
+## Icon generation
+
+We use [gulpicon](https://github.com/filamentgroup/gulpicon) to auto-magically generate svg icons with fallbacks using a simple gulp task. However, there is some set-up that make things optimal.
+
+1. Export the SVG from a graphics package as simple path or stroke data, combining as required.
+2. No text in icons please. If you do have a Glyph, outline the font.
+3. Clip the SVG to artboard so there are no borders or gaps from the edge
+4. If you plan on using Gulpicons colouring method (see here [gulpicon colors](https://github.com/filamentgroup/grunticon-lib#optionscustomselectors)) then export fills or strokes as pure black (#000) and name using the color method (name.colors-color1-color2) [color naming(https://github.com/filamentgroup/grunticon-lib#optionsdynamiccoloronly)]. You must name colors in the `config.js` file prior to building. It's also good practice to name these colours as per the color palette for the website.
+5. Save icons to the source folder in `assets/icons/source`
+6. Run the gulp task `gulp build:icons` when you want to build icons. They out put to the `assets/icons/renders` folder.
+
+
+# Starting a new project
 
 The power of Cooper is in having a solid base to start from.
 
