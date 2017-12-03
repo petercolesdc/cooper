@@ -51,6 +51,7 @@
 .typeXL {
 	@extend %typebaseRoot;
 	font-size: rem($typeXL);
+	line-height: 1.4;
 	&_trailer {
 		margin-bottom: rem($typeXL/2);
 	}
@@ -109,6 +110,7 @@
 // Default text
 // ------------------------------------------------------------------
 
+// Shorthand to call the base textsize ($typeMe)
 .text {
 	@extend .typeMe;
 }
@@ -119,7 +121,7 @@
 	}
 }
 
-.unordered-list {
+.unordered_list {
 	list-style-type: square;
 	@extend %textList;
 	ul {
@@ -128,7 +130,7 @@
 	}
 }
 
-.ordered-list {
+.ordered_list {
 	list-style-type: decimal;
 	@extend %textList;
 	ol {
@@ -137,6 +139,14 @@
 	}
 }
 
+.simple_list {
+	list-style-type: none;
+	@extend %textList;
+	ol {
+		list-style-type: none;
+		padding-left: 2rem;
+	}
+}
 
 // Typebase (for runs of text)
 // ------------------------------------------------------------------
@@ -155,10 +165,10 @@
 		margin-top: rem($typeMe);
 	}
 	ul {
-		@extend .unordered-list;
+		@extend .unordered_list;
 	}
 	ol {
-		@extend .ordered-list;
+		@extend .ordered_list;
 	}
 	img, pre {
 		display: block;
