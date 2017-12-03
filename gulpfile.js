@@ -2,13 +2,26 @@ var gulp            = require("gulp")
     sass            = require("gulp-sass")
     autoprefixer    = require("gulp-autoprefixer")
     sassGlob        = require('gulp-sass-glob')
+    glob            = require("glob")
     del             = require("del")
     nunjucksRender  = require("gulp-nunjucks-render")
     fs              = require("fs")
     runSequence     = require("run-sequence")
     exec            = require("child_process").exec;
-    browserSync     = require("browser-sync").create();
-    plumber         = require("gulp-plumber");
+    browserSync     = require("browser-sync").create()
+    plumber         = require("gulp-plumber")
+
+    // gulpicon
+    gulpicon        = require("gulpicon/tasks/gulpicon");
+
+    // grab the config, tack on the output destination
+    config          = require("./assets/icons/config.js");
+    config.dest     = "./assets/icons/renders/";
+
+    // grab the file paths
+    files           = glob.sync("./assets/icons/source/*.svg");
+
+    // --------------------------------
 
     // Concat and copy CSS
     gulp.task("scss", function () {
@@ -82,3 +95,6 @@ var gulp            = require("gulp")
 
     // Spins up a sever to render test templates
     gulp.task("serve", ["watch-all", "browser-sync"])
+
+    // Build icons
+    gulp.task("build:icons", gulpicon(files, config));
