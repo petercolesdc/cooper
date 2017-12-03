@@ -1,0 +1,21 @@
+
+.docs {
+  display: grid;
+  grid-template-areas: "aside body";
+  grid-template-columns: 320px 1fr;
+  &_aside {
+    grid-area: aside;
+    background-color: #eee;
+    min-height: 100vh;
+    .menu {
+        padding: $spaceBase*2;
+    }
+  }
+  &_body {
+    grid-area: body;
+    padding: $spaceBase*2 $spaceBase*2 $spaceBase*2 $spaceBaseP*2;
+    .typebase {
+      max-width: 650px;
+    }
+  }
+}

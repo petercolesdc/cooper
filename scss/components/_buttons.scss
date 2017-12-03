@@ -5,6 +5,7 @@ $btnSmall:    36px;
 $btnDefault:  40px;
 $btnLarge:    46px;
 $btnRadius:   4px;
+$btnPadding:  10px;
 
 // Button base style
 
@@ -12,7 +13,7 @@ $btnRadius:   4px;
   @include animationHacks;
   cursor: pointer;
   position: relative;
-  padding: 0 $spaceMe;
+  padding: 0 $btnPadding;
   vertical-align: middle;
   text-align: center;
   color: #fff;

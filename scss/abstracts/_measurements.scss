@@ -2,22 +2,14 @@
 // General spacing options
 // ------------------------------------------------------------------
 
-$spaceBase: 10px;
-
-$spaceXS: 	$spaceBase;
-$spaceS: 		$spaceBase*1.5;
-$spaceMe: 	$spaceBase*2;	// Median
-$spaceL: 		$spaceBase*4;
-$spaceXL: 	$spaceBase*6;
-
-
-// ------------------------------------------------------------------
+$spaceBase: 20px;
+$spaceBaseP: 10%;
 
 
 // Buffers. Edge spacing of parent elements generally (rows etc...)
-$bufferSpaceS:	$spaceS;
-$bufferSpaceM:	$spaceMe;
-$bufferSpaceL:	$spaceL;
+$bufferSpaceS:	$spaceBase;
+$bufferSpaceM:	$spaceBase*2;
+$bufferSpaceL:	$spaceBase*4;
 
 
 // Double declare variable so we know what the largest buffer size is

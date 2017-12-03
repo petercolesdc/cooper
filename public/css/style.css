@@ -591,25 +591,50 @@ a[href^="tel"] {
   src: local(".SFNSText-BoldItalic"), local(".HelveticaNeueDeskInterface-BoldItalic"), local(".LucidaGrandeUI"), local("Segoe UI Bold Italic"), local("Ubuntu Bold Italic"), local("Roboto-BoldItalic"), local("DroidSans-Bold"), local("Tahoma Bold");
 }
 
+.docs {
+  display: grid;
+  grid-template-areas: "aside body";
+  grid-template-columns: 320px 1fr;
+}
+
+.docs_aside {
+  grid-area: aside;
+  background-color: #eee;
+  min-height: 100vh;
+}
+
+.docs_aside .menu {
+  padding: 40px;
+}
+
+.docs_body {
+  grid-area: body;
+  padding: 40px 40px 40px 20%;
+}
+
+.docs_body .typebase {
+  max-width: 650px;
+}
+
 .row {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1280px;
+  max-width: 1360px;
   min-width: auto;
   position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media screen and (min-width: 800px) {
   .row {
-    padding-left: 20px;
+    padding-left: 40px;
   }
 }
 
 @media screen and (min-width: 800px) {
   .row {
-    padding-right: 20px;
+    padding-right: 40px;
   }
 }
 
@@ -646,7 +671,7 @@ code {
           box-shadow: 0 0 1px transparent;
   cursor: pointer;
   position: relative;
-  padding: 0 20px;
+  padding: 0 10px;
   vertical-align: middle;
   text-align: center;
   color: #fff;
