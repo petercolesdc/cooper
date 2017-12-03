@@ -1,6 +1,6 @@
 html {
   @include sharp-text;
-  font-size: $remRoot + px;
+  font-size: $scaleRoot + px;
   @media (max-width: $vpDeviceSafe) {
     -webkit-text-size-adjust: 100%;
   }
@@ -9,7 +9,7 @@ html {
 body {
   color: $dmText;
   font-family: $fontDefault;
-  line-height: $lineheightRoot;
+  line-height: $lineheightBase;
 }
 
 a {
@@ -27,7 +27,7 @@ a {
   }
   @include link-active-styles {
     &:not(.button) {
-    
+
     }
   }
 }

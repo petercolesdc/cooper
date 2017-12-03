@@ -3,7 +3,7 @@
 // ------------------------------------------------------------------
 
 %typebaseRoot {
-	line-height: $lineheightRoot;
+	line-height: $lineheightBase;
 	margin-bottom: 0;
 	margin-top: 0;
 }
@@ -22,76 +22,53 @@
 	@extend %typebaseRoot;
 	@extend %kernTight;
 	font-size: rem($typeMasthead);
-	&_trailer {
-		margin-bottom: rem($typeMasthead/4);
-	}
+	@include leading_offset(6);
 }
 
 .typeHeadline {
 	@extend %typebaseRoot;
 	@extend %kernTight;
 	font-size: rem($typeHeadline);
-	&_trailer {
-		margin-bottom: rem($typeHeadline/2);
-	}
+	@include leading_offset(6);
 }
 
 .typeByline {
 	@extend %typebaseRoot;
 	@extend %kernTight;
 	font-size: rem($typeByline);
-	&_trailer {
-		margin-bottom: rem($typeByline/4);
-	}
+	@include leading_offset(6);
 }
 
 .typeXL {
 	@extend %typebaseRoot;
 	font-size: rem($typeXL);
-	&_trailer {
-		margin-bottom: rem($typeXL/2);
-	}
+	@include leading_offset(6);
 }
 
 .typeL {
 	@extend %typebaseRoot;
 	font-size: rem($typeL);
-	&_trailer {
-		margin-bottom: rem($typeL/2);
-	}
 }
 
 .typeM {
 	@extend %typebaseRoot;
 	font-size: rem($typeM);
-	&_trailer {
-		margin-bottom: rem($typeM/2);
-	}
 }
 
 // Median
 .typeMe {
 	@extend %typebaseRoot;
 	font-size: rem($typeMe);
-	&_trailer {
-		margin-bottom: rem($typeM/2);
-	}
 }
 
 .typeS {
 	@extend %typebaseRoot;
 	font-size: rem($typeS);
-	&_trailer {
-		margin-bottom: rem($typeS/2);
-	}
 }
 
 .typeXS {
 	@extend %typebaseRoot;
 	font-size: rem($typeXS);
-	&_trailer {
-		margin-bottom: rem($typeXS/2);
-	}
 }
 
 // Heading styles

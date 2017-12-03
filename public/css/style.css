@@ -352,74 +352,46 @@ a[href^="tel"] {
 
 .typeMasthead {
   font-size: 7rem;
-}
-
-.typeMasthead_trailer {
-  margin-bottom: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: 0.78rem;
 }
 
 .typeHeadline {
   font-size: 5.6rem;
-}
-
-.typeHeadline_trailer {
-  margin-bottom: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 0.78rem;
 }
 
 .typeByline {
   font-size: 4.2rem;
-}
-
-.typeByline_trailer {
-  margin-bottom: 1.05rem;
+  line-height: 1.2;
+  margin-bottom: 0.78rem;
 }
 
 .typeXL, .typebase h1 {
   font-size: 3.6rem;
-}
-
-.typeXL_trailer {
-  margin-bottom: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 0.78rem;
 }
 
 .typeL, .typebase h2 {
   font-size: 2.8rem;
 }
 
-.typeL_trailer {
-  margin-bottom: 1.4rem;
-}
-
 .typeM, .typebase h3, .typebase h4 {
   font-size: 2.4rem;
-}
-
-.typeM_trailer {
-  margin-bottom: 1.2rem;
 }
 
 .typeMe {
   font-size: 1.8rem;
 }
 
-.typeMe_trailer {
-  margin-bottom: 1.2rem;
-}
-
 .typeS, .typebase h5 {
   font-size: 1.6rem;
 }
 
-.typeS_trailer {
-  margin-bottom: 0.8rem;
-}
-
 .typeXS, .typebase h6 {
   font-size: 1.5rem;
-}
-
-.typeXS_trailer {
-  margin-bottom: 0.75rem;
 }
 
 .heading, .typebase h1, .typebase h2, .typebase h3, .typebase h4, .typebase h5, .typebase h6 {

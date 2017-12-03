@@ -2,15 +2,9 @@
 // Type scale
 // ------------------------------------------------------------------
 
-$remRoot: 10;
-
-@function rem($pixels){
-	@return $pixels / $remRoot + rem; // Usage = font-size: rem(xx);
-}
-
-// General type scale
 $scaleRoot: 				10;
-$lineheightRoot: 		1.8;
+$lineheightRoot: 		18;
+$lineheightBase: 		$lineheightRoot / $scaleRoot;
 
 $typeXL: 						$scaleRoot*3.6;
 $typeL: 						$scaleRoot*2.8;
@@ -26,3 +20,18 @@ $typeDefault: 			$typeMe;
 $typeMasthead:			$scaleRoot*7;
 $typeHeadline:			$scaleRoot*5.6;
 $typeByline:				$scaleRoot*4.2;
+
+
+// Functions and mixins
+// ------------------------------------------------------------------
+
+// Make pixel values into REMS
+@function rem($pixels){
+	@return $pixels / $scaleRoot + rem; // Usage = font-size: rem(xx);
+}
+
+// If you want leading tighter than the $lineheightBase then add a bottom margin to equalise rhythm
+@mixin leading_offset($offset) {
+	line-height:  $lineheightBase - ($offset/$scaleRoot);
+	margin-bottom: rem($lineheightBase + $offset);
+}
