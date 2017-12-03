@@ -1,3 +1,66 @@
+// Brandfonts
+
+$fontdir: "/assets/fonts/";
+
+@font-face {
+    font-family: 'Averta';
+    src: url($fontdir + 'averta-light-webfont.eot');
+    src: url($fontdir + 'averta-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url($fontdir + 'averta-light-webfont.woff2') format('woff2'),
+         url($fontdir + 'averta-light-webfont.woff') format('woff'),
+         url($fontdir + 'averta-light-webfont.ttf') format('truetype'),
+         url($fontdir + 'averta-light-webfont.svg#avertalight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url($fontdir + 'averta-regular-webfont.eot');
+    src: url($fontdir + 'averta-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url($fontdir + 'averta-regular-webfont.woff2') format('woff2'),
+         url($fontdir + 'averta-regular-webfont.woff') format('woff'),
+         url($fontdir + 'averta-regular-webfont.ttf') format('truetype'),
+         url($fontdir + 'averta-regular-webfont.svg#avertaregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url($fontdir + 'averta-regularitalic-webfont.eot');
+    src: url($fontdir + 'averta-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url($fontdir + 'averta-regularitalic-webfont.woff2') format('woff2'),
+         url($fontdir + 'averta-regularitalic-webfont.woff') format('woff'),
+         url($fontdir + 'averta-regularitalic-webfont.ttf') format('truetype'),
+         url($fontdir + 'averta-regularitalic-webfont.svg#avertaregular_italic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url($fontdir + 'averta-semibold-webfont.eot');
+    src: url($fontdir + 'averta-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url($fontdir + 'averta-semibold-webfont.woff2') format('woff2'),
+         url($fontdir + 'averta-semibold-webfont.woff') format('woff'),
+         url($fontdir + 'averta-semibold-webfont.ttf') format('truetype'),
+         url($fontdir + 'averta-semibold-webfont.svg#avertasemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url($fontdir + 'averta-bold-webfont.eot');
+    src: url($fontdir + 'averta-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url($fontdir + 'averta-bold-webfont.woff2') format('woff2'),
+         url($fontdir + 'averta-bold-webfont.woff') format('woff'),
+         url($fontdir + 'averta-bold-webfont.ttf') format('truetype'),
+         url($fontdir + 'averta-bold-webfont.svg#avertabold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
 
 // Better local fonts
 @font-face {

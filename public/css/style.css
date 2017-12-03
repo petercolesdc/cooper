@@ -306,7 +306,7 @@ html {
 
 body {
   color: #6F777B;
-  font-family: system-ui, sans-serif;
+  font-family: "Averta", "Averta Regular", "Averta-Regular", system-ui, sans-serif;
   line-height: 1.8;
 }
 
@@ -334,7 +334,7 @@ a[href^="tel"] {
   text-decoration: none;
 }
 
-.typeMasthead, .typeHeadline, .typeByline, .typeXL, .typebase h1, .typeL, .typebase h2, .typeM, .typebase h3, .typebase h4, .typeMe, .text, .typebase p, .typebase li, .unordered_list li, .ordered_list li, .simple_list li, .typeS, .typebase h5, .typeXS, .typebase h6 {
+.typeMasthead, .typeHeadline, .typeByline, .typeXL, .typebase h1, .typeL, .typebase h2, .typeM, .typebase h3, .typebase h4, .typeMe, .typeS, .typebase h5, .typeXS, .typebase h6, .text, .unordered_list li, .ordered_list li, .simple_list li, .typebase p, .typebase li {
   line-height: 1.8;
   margin-bottom: 0;
   margin-top: 0;
@@ -352,7 +352,6 @@ a[href^="tel"] {
 
 .typeMasthead {
   font-size: 7rem;
-  line-height: 1;
 }
 
 .typeMasthead_trailer {
@@ -361,7 +360,6 @@ a[href^="tel"] {
 
 .typeHeadline {
   font-size: 5.6rem;
-  line-height: 1.4;
 }
 
 .typeHeadline_trailer {
@@ -370,7 +368,6 @@ a[href^="tel"] {
 
 .typeByline {
   font-size: 4.2rem;
-  line-height: 1.4;
 }
 
 .typeByline_trailer {
@@ -378,58 +375,61 @@ a[href^="tel"] {
 }
 
 .typeXL, .typebase h1 {
-  font-size: 2.8rem;
-  line-height: 1.4;
+  font-size: 3.6rem;
 }
 
 .typeXL_trailer {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.8rem;
 }
 
 .typeL, .typebase h2 {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
 }
 
 .typeL_trailer {
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.4rem;
 }
 
 .typeM, .typebase h3, .typebase h4 {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
 }
 
 .typeM_trailer {
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.2rem;
 }
 
-.typeMe, .text, .typebase p, .typebase li, .unordered_list li, .ordered_list li, .simple_list li {
-  font-size: 1.6rem;
+.typeMe {
+  font-size: 1.8rem;
 }
 
 .typeMe_trailer {
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.2rem;
 }
 
 .typeS, .typebase h5 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .typeS_trailer {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.8rem;
 }
 
 .typeXS, .typebase h6 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .typeXS_trailer {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
 }
 
 .heading, .typebase h1, .typebase h2, .typebase h3, .typebase h4, .typebase h5, .typebase h6 {
   display: block;
   font-weight: 700;
-  color: #0B0C0C;
+  color: #491D5D;
+}
+
+.text, .unordered_list li, .ordered_list li, .simple_list li, .typebase p, .typebase li {
+  font-size: 18;
 }
 
 .unordered_list, .typebase ul {
@@ -460,23 +460,23 @@ a[href^="tel"] {
 }
 
 .typebase p {
-  margin-top: 1.6rem;
+  margin-top: 1.8rem;
   display: block;
 }
 
 .typebase ul,
 .typebase ol {
-  margin-top: 1.6rem;
+  margin-top: 1.8rem;
 }
 
 .typebase img, .typebase pre {
   display: block;
-  margin-top: 3.2rem;
-  margin-bottom: 1.6rem;
+  margin-top: 3.6rem;
+  margin-bottom: 1.8rem;
 }
 
 .typebase h1, .typebase h2, .typebase h3, .typebase h4, .typebase h5, .typebase h6 {
-  margin-top: 3.2rem;
+  margin-top: 3.6rem;
 }
 
 .typebase h5 {
@@ -533,6 +533,46 @@ a[href^="tel"] {
 .typebase cite:empty,
 .typebase div:empty {
   display: none;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("/assets/fonts/averta-light-webfont.eot");
+  src: url("/assets/fonts/averta-light-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/averta-light-webfont.woff2") format("woff2"), url("/assets/fonts/averta-light-webfont.woff") format("woff"), url("/assets/fonts/averta-light-webfont.ttf") format("truetype"), url("/assets/fonts/averta-light-webfont.svg#avertalight") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("/assets/fonts/averta-regular-webfont.eot");
+  src: url("/assets/fonts/averta-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/averta-regular-webfont.woff2") format("woff2"), url("/assets/fonts/averta-regular-webfont.woff") format("woff"), url("/assets/fonts/averta-regular-webfont.ttf") format("truetype"), url("/assets/fonts/averta-regular-webfont.svg#avertaregular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("/assets/fonts/averta-regularitalic-webfont.eot");
+  src: url("/assets/fonts/averta-regularitalic-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/averta-regularitalic-webfont.woff2") format("woff2"), url("/assets/fonts/averta-regularitalic-webfont.woff") format("woff"), url("/assets/fonts/averta-regularitalic-webfont.ttf") format("truetype"), url("/assets/fonts/averta-regularitalic-webfont.svg#avertaregular_italic") format("svg");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("/assets/fonts/averta-semibold-webfont.eot");
+  src: url("/assets/fonts/averta-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/averta-semibold-webfont.woff2") format("woff2"), url("/assets/fonts/averta-semibold-webfont.woff") format("woff"), url("/assets/fonts/averta-semibold-webfont.ttf") format("truetype"), url("/assets/fonts/averta-semibold-webfont.svg#avertasemibold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("/assets/fonts/averta-bold-webfont.eot");
+  src: url("/assets/fonts/averta-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/averta-bold-webfont.woff2") format("woff2"), url("/assets/fonts/averta-bold-webfont.woff") format("woff"), url("/assets/fonts/averta-bold-webfont.ttf") format("truetype"), url("/assets/fonts/averta-bold-webfont.svg#avertabold") format("svg");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
@@ -594,7 +634,7 @@ a[href^="tel"] {
 .docs {
   display: grid;
   grid-template-areas: "aside body";
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 365px 1fr;
 }
 
 .docs_aside {
@@ -609,11 +649,11 @@ a[href^="tel"] {
 
 .docs_body {
   grid-area: body;
-  padding: 40px 40px 40px 20%;
+  padding: 40px 40px 40px 17.5%;
 }
 
 .docs_body .typebase {
-  max-width: 650px;
+  max-width: 665px;
 }
 
 .row {
@@ -657,8 +697,8 @@ pre:focus, pre:hover {
 }
 
 code {
-  font-family: fira-sans, monospace;
-  font-size: 1.4rem;
+  font-family: "Inconsolata Regular", "Inconsolata-Regular", "Inconsolata", system-ui, monospace;
+  font-size: 1.6rem;
   line-height: 1.8;
 }
 
@@ -694,18 +734,18 @@ code {
 }
 
 .button {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 40px;
   background-color: #006435;
 }
 
 .buttonSmall {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 36px;
 }
 
 .buttonLarge {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 46px;
 }
 

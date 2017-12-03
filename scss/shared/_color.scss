@@ -1,9 +1,11 @@
 // ---
-// I like to prefix a colour name with the initials of the project. Eg 'dm'
+// Prefix a colour name with the initials of the project. Eg 'dm' for datamesh
+// !default flags allow us to over-ride colorss per project if we need to without changing shared colors
 // ---
 
 // Brand colours
-$dmExample: 				#f98787;
+$dmByers: 				  #491D5D!default;
+$dmWheeler:         #21F9EE!default;
+$dmHopper:          #00FF7C!default;
 
 // Greyscales
-$dmExampleMono: 		#181818;

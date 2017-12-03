@@ -22,7 +22,6 @@
 	@extend %typebaseRoot;
 	@extend %kernTight;
 	font-size: rem($typeMasthead);
-	line-height: 1;
 	&_trailer {
 		margin-bottom: rem($typeMasthead/4);
 	}
@@ -32,7 +31,6 @@
 	@extend %typebaseRoot;
 	@extend %kernTight;
 	font-size: rem($typeHeadline);
-	line-height: 1.4;
 	&_trailer {
 		margin-bottom: rem($typeHeadline/2);
 	}
@@ -42,7 +40,6 @@
 	@extend %typebaseRoot;
 	@extend %kernTight;
 	font-size: rem($typeByline);
-	line-height: 1.4;
 	&_trailer {
 		margin-bottom: rem($typeByline/4);
 	}
@@ -51,7 +48,6 @@
 .typeXL {
 	@extend %typebaseRoot;
 	font-size: rem($typeXL);
-	line-height: 1.4;
 	&_trailer {
 		margin-bottom: rem($typeXL/2);
 	}
@@ -110,14 +106,14 @@
 // Default text
 // ------------------------------------------------------------------
 
-// Shorthand to call the base textsize ($typeMe)
 .text {
-	@extend .typeMe;
+	@extend %typebaseRoot;
+	font-size: $typeDefault;
 }
 
 %textList {
 	li {
-		@extend .typeMe;
+		@extend .text;
 	}
 }
 

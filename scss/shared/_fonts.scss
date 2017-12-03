@@ -1,9 +1,9 @@
 // Font declarations
 // ------------------------------------------------------------------
 
-$fontBrand:     system-ui, sans-serif!default;
-$fontVoice:     system-ui, sans-serif!default;
-$fontMono:      fira-sans, monospace!default;
+$fontBrand:     "Averta", "Averta Regular", "Averta-Regular", system-ui, sans-serif!default;
+$fontVoice:     "Inconsolata Regular", "Inconsolata-Regular", "Inconsolata", system-ui, monospace!default;
+$fontMono:      $fontVoice;
 
 
 // Font weights (can be numerical or actual font files)

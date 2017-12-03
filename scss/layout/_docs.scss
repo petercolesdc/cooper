@@ -2,7 +2,7 @@
 .docs {
   display: grid;
   grid-template-areas: "aside body";
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 365px 1fr;
   &_aside {
     grid-area: aside;
     background-color: #eee;
@@ -13,9 +13,9 @@
   }
   &_body {
     grid-area: body;
-    padding: $spaceBase*2 $spaceBase*2 $spaceBase*2 $spaceBaseP*2;
+    padding: $spaceBase*2 $spaceBase*2 $spaceBase*2 $spaceBaseP*1.75;
     .typebase {
-      max-width: 650px;
+      max-width: 665px;
     }
   }
 }
