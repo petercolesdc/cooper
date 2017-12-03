@@ -8,10 +8,12 @@ var gulp            = require("gulp")
     runSequence     = require("run-sequence")
     exec            = require("child_process").exec;
     browserSync     = require("browser-sync").create();
+    plumber         = require("gulp-plumber");
 
     // Concat and copy CSS
     gulp.task("scss", function () {
       gulp.src("scss/**/*.scss")
+        .pipe(plumber())
         .pipe(sassGlob())
         .pipe(sass({outputStyle : "expanded"}))
         .pipe(autoprefixer({browsers : ["last 6 versions"]}))
@@ -21,16 +23,18 @@ var gulp            = require("gulp")
     // Copy javascript
     gulp.task("js", function () {
       gulp.src("js/**/*.js")
+        .pipe(plumber())
         .pipe(gulp.dest("public/js/"))
     })
 
     // Assets copy
     gulp.task("assets", function () {
       gulp.src("assets/**/*")
+        .pipe(plumber())
         .pipe(gulp.dest("public/assets/"))
     })
 
-    // Watch asset folder for changes
+    // Watch asset folders for changes
     gulp.task("watch", ["scss", "js", "assets"], function () {
       gulp.watch("js/**/*", ["js"])
       gulp.watch("scss/**/*", ["scss"])
@@ -44,6 +48,7 @@ var gulp            = require("gulp")
     // Render templates
     gulp.task("render", function () {
       gulp.src("templates/*.html")
+        .pipe(plumber())
         .pipe(nunjucksRender({
           path: ["templates"]
         }))
