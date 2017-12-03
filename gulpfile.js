@@ -5,12 +5,11 @@ var gulp            = require("gulp")
     glob            = require("glob")
     del             = require("del")
     nunjucksRender  = require("gulp-nunjucks-render")
-    fs              = require("fs")
-    runSequence     = require("run-sequence")
-    exec            = require("child_process").exec;
     browserSync     = require("browser-sync").create()
     plumber         = require("gulp-plumber")
 
+    // --------------------------------
+    
     // gulpicon
     gulpicon        = require("gulpicon/tasks/gulpicon");
 
