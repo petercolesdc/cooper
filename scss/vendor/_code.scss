@@ -19,5 +19,8 @@ pre {
 code {
   font-family: $fontMono;
   font-size: rem($typeS);
-  line-height: $lineheightRoot;
+  line-height: inherit;
+  pre & {
+    line-height: $lineheightBase;
+  }
 }

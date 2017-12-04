@@ -719,7 +719,11 @@ pre:focus, pre:hover {
 code {
   font-family: "Inconsolata", "Inconsolata Regular", "Inconsolata-Regular", monospace;
   font-size: 1.6rem;
-  line-height: 18;
+  line-height: inherit;
+}
+
+pre code {
+  line-height: 1.8;
 }
 
 .button {
