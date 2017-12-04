@@ -313,9 +313,6 @@ body {
 a {
   color: #005EA5;
   text-decoration: none;
-  -webkit-transition: background-image linear 0.125s;
-  -o-transition: background-image linear 0.125s;
-  transition: background-image linear 0.125s;
 }
 
 a:not(.button) {

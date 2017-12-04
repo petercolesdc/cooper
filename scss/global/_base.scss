@@ -15,7 +15,6 @@ body {
 a {
   color: $dmAction;
   text-decoration: none;
-  transition: background-image linear 0.125s;
   &:not(.button) {
     background-image: linear-gradient(
       to top,
