@@ -319,10 +319,10 @@ a {
 }
 
 a:not(.button) {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 94, 165, 0)), color-stop(0%, rgba(0, 94, 165, 0.2)), color-stop(18%, rgba(0, 94, 165, 0.2)), color-stop(18%, rgba(0, 94, 165, 0)));
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 94, 165, 0) 0%, rgba(0, 94, 165, 0.2) 0%, rgba(0, 94, 165, 0.2) 18%, rgba(0, 94, 165, 0) 18%);
-  background-image: -o-linear-gradient(bottom, rgba(0, 94, 165, 0) 0%, rgba(0, 94, 165, 0.2) 0%, rgba(0, 94, 165, 0.2) 18%, rgba(0, 94, 165, 0) 18%);
-  background-image: linear-gradient(to top, rgba(0, 94, 165, 0) 0%, rgba(0, 94, 165, 0.2) 0%, rgba(0, 94, 165, 0.2) 18%, rgba(0, 94, 165, 0) 18%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(3%, rgba(0, 94, 165, 0)), color-stop(3%, rgba(0, 94, 165, 0.2)), color-stop(14%, rgba(0, 94, 165, 0.2)), color-stop(14%, rgba(0, 94, 165, 0)));
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 94, 165, 0) 3%, rgba(0, 94, 165, 0.2) 3%, rgba(0, 94, 165, 0.2) 14%, rgba(0, 94, 165, 0) 14%);
+  background-image: -o-linear-gradient(bottom, rgba(0, 94, 165, 0) 3%, rgba(0, 94, 165, 0.2) 3%, rgba(0, 94, 165, 0.2) 14%, rgba(0, 94, 165, 0) 14%);
+  background-image: linear-gradient(to top, rgba(0, 94, 165, 0) 3%, rgba(0, 94, 165, 0.2) 3%, rgba(0, 94, 165, 0.2) 14%, rgba(0, 94, 165, 0) 14%);
 }
 
 svg {
@@ -352,14 +352,14 @@ a[href^="tel"] {
 
 .typeMasthead {
   font-size: 7rem;
-  line-height: 1.2;
-  margin-bottom: 0.78rem;
+  line-height: 1;
+  margin-bottom: 0.98rem;
 }
 
 .typeHeadline {
   font-size: 5.6rem;
-  line-height: 1.2;
-  margin-bottom: 0.78rem;
+  line-height: 1;
+  margin-bottom: 0.98rem;
 }
 
 .typeByline {
@@ -376,22 +376,41 @@ a[href^="tel"] {
 
 .typeL, .typebase h2 {
   font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 0.78rem;
 }
 
 .typeM, .typebase h3, .typebase h4 {
   font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 0.78rem;
 }
 
 .typeMe {
   font-size: 1.8rem;
 }
 
+.typeMe.heading, .typebase h1.typeMe, .typebase h2.typeMe, .typebase h3.typeMe, .typebase h4.typeMe, .typebase h5.typeMe, .typebase h6.typeMe {
+  line-height: 1.4;
+  margin-bottom: 0.58rem;
+}
+
 .typeS, .typebase h5 {
   font-size: 1.6rem;
 }
 
+.typeS.heading, .typebase h1.typeS, .typebase h2.typeS, .typebase h3.typeS, .typebase h4.typeS, .typebase h5, .typebase h6.typeS {
+  line-height: 1.4;
+  margin-bottom: 0.58rem;
+}
+
 .typeXS, .typebase h6 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.typeXS.heading, .typebase h1.typeXS, .typebase h2.typeXS, .typebase h3.typeXS, .typebase h4.typeXS, .typebase h5.typeXS, .typebase h6 {
+  line-height: 1.6;
+  margin-bottom: 0.38rem;
 }
 
 .heading, .typebase h1, .typebase h2, .typebase h3, .typebase h4, .typebase h5, .typebase h6 {
@@ -426,7 +445,7 @@ a[href^="tel"] {
   list-style-type: none;
 }
 
-.simple_list ol {
+.simple_list ol, .simple_list ul {
   list-style-type: none;
   padding-left: 2rem;
 }
@@ -505,6 +524,13 @@ a[href^="tel"] {
 .typebase cite:empty,
 .typebase div:empty {
   display: none;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url("/assets/fonts/inconsolata-regular-webfont.ttf") format("truetype"), url("/assets/fonts/inconsolata-regular-webfont.woff2") format("woff2"), url("/assets/fonts/inconsolata-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -669,7 +695,7 @@ pre:focus, pre:hover {
 }
 
 code {
-  font-family: "Inconsolata Regular", "Inconsolata-Regular", "Inconsolata", system-ui, monospace;
+  font-family: "Inconsolata", "Inconsolata Regular", "Inconsolata-Regular", monospace;
   font-size: 1.6rem;
   line-height: 1.8;
 }
@@ -712,7 +738,7 @@ code {
 }
 
 .buttonSmall {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 36px;
 }
 

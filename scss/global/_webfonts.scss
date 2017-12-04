@@ -3,6 +3,15 @@
 $fontdir: "/assets/fonts/";
 
 @font-face {
+    font-family: 'Inconsolata';
+    src: url($fontdir + 'inconsolata-regular-webfont.ttf') format('truetype'),
+         url($fontdir + 'inconsolata-regular-webfont.woff2') format('woff2'),
+         url($fontdir + 'inconsolata-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Averta';
     src: url($fontdir + 'averta-light-webfont.eot');
     src: url($fontdir + 'averta-light-webfont.eot?#iefix') format('embedded-opentype'),
