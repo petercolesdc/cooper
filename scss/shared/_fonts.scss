@@ -3,7 +3,7 @@
 
 $fontBrand:     "Averta", "Averta Regular", "Averta-Regular", system-ui, sans-serif!default;
 $fontVoice:     "Inconsolata", "Inconsolata Regular", "Inconsolata-Regular", monospace!default;
-$fontMono:      $fontVoice;
+$fontMono:      $fontVoice!default;
 
 
 // Font weights (can be numerical or actual font files)
