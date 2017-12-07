@@ -28,8 +28,7 @@ We use [gulpicon](https://github.com/filamentgroup/gulpicon) to auto-magically g
 1. Export the SVG from a graphics package as simple path or stroke data, combining as required.
 2. No text in icons please. If you do have a Glyph, outline the font.
 3. Clip the SVG to artboard so there are no borders or gaps from the edge
-4. If you plan on using Gulpicons colouring method (see here [gulpicon colors](https://github.com/filamentgroup/grunticon-lib#optionscustomselectors)) then export fills or strokes as pure black (#000) and name using the color method (name.colors-color1-color2) [color naming(https://github.com/filamentgroup/grunticon-lib#optionsdynamiccoloronly)]. You must name colors in the `config.js` file prior to building. It's also good practice to name these colours as per the color palette for the website.
-5. Save icons to the source folder in `assets/icons/source`
+4. Save icons to the source folder in `assets/icons/source`
 6. Run the gulp task `gulp build:icons` when you want to build icons. They out put to the `assets/icons/renders` folder.
 
 

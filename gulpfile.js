@@ -7,18 +7,7 @@ var gulp            = require("gulp")
     nunjucksRender  = require("gulp-nunjucks-render")
     browserSync     = require("browser-sync").create()
     plumber         = require("gulp-plumber")
-
-    // --------------------------------
-    
-    // gulpicon
-    gulpicon        = require("gulpicon/tasks/gulpicon");
-
-    // grab the config, tack on the output destination
-    config          = require("./assets/icons/config.js");
-    config.dest     = "./assets/icons/renders/";
-
-    // grab the file paths
-    files           = glob.sync("./assets/icons/source/*.svg");
+    svgSprite       = require('gulp-svg-sprite')
 
     // --------------------------------
 
@@ -53,17 +42,58 @@ var gulp            = require("gulp")
       gulp.watch("assets/**/*", ["assets"])
     })
 
+    // SVG Config
+    var config = {
+      shape: {
+        id: {
+          separator: "_",
+          whitespace: '_'
+        }
+      },
+      mode: {
+        symbol: { // symbol mode to build the SVG
+          dest: 'assets/icons/renders',
+          sprite: 'sprite.svg',
+          example: true,
+          dimensions: "_svg",
+          prefix: ".icon_"
+        }
+      },
+      svg: {
+        namespaceIDs: false,
+        dimensionAttributes: false,
+        xmlDeclaration: false, // strip out the XML attribute
+        doctypeDeclaration: false // don't include the !DOCTYPE declaration
+      }
+    };
+
+    gulp.task('sprite-page', function() {
+      gulp.src('assets/icons/source/**/*.svg')
+        .pipe(plumber())
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest('.'));
+    });
+
+    gulp.task('sprite-shortcut', function() {
+      gulp.src('assets/icons/renders/*')
+        .pipe(plumber())
+        .pipe(gulp.dest('templates/'));
+    });
+
+
     // --------------------------------------
     // Test templates
     // --------------------------------------
 
     // Render templates
     gulp.task("render", function () {
-      gulp.src("templates/*.html")
+      gulp.src("templates/*")
         .pipe(plumber())
-        .pipe(nunjucksRender({
-          path: ["templates"]
-        }))
+        .pipe(nunjucksRender(
+          {
+            path: "templates",
+            inheritExtension: true,
+          }))
         .pipe(gulp.dest("public"))
     })
 
@@ -95,5 +125,5 @@ var gulp            = require("gulp")
     // Spins up a sever to render test templates
     gulp.task("serve", ["watch-all", "browser-sync"])
 
-    // Build icons
-    gulp.task("build:icons", gulpicon(files, config));
+    // Icon Build
+    gulp.task('icons:build', ['sprite-page', 'sprite-shortcut']);
