@@ -36,6 +36,15 @@ $btnPadding:  10px;
   }
 }
 
+.button {
+  &Block {
+    display: block;
+  }
+  &_thing {
+
+  }
+}
+
 // Sizes
 // ------------------------------------------------------------------
 
@@ -70,6 +79,7 @@ $btnPadding:  10px;
     }
   }
 }
+
 
 // Aria label style
 // Allows us to have an aria unique label but shortend visual label

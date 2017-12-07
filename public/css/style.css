@@ -413,7 +413,7 @@ a[href^="tel"] {
 .heading, .typebase h1, .typebase h2, .typebase h3, .typebase h4, .typebase h5, .typebase h6 {
   display: block;
   font-weight: 700;
-  color: #491D5D;
+  color: #000000;
 }
 
 .text, .unordered_list li, .ordered_list li, .simple_list li, .typebase p, .typebase li {
@@ -755,6 +755,10 @@ pre code {
 .button span {
   font-size: inherit;
   font-weight: inherit;
+}
+
+.buttonBlock {
+  display: block;
 }
 
 .button {
