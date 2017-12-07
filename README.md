@@ -23,13 +23,17 @@ It all runs on gulp and inputs and outputs are configured via the gulpfile.js. C
 
 ## Icon generation
 
-We use [gulpicon](https://github.com/filamentgroup/gulpicon) to auto-magically generate svg icons with fallbacks using a simple gulp task. However, there is some set-up that make things optimal.
+We use [una's boilerplate](https://github.com/una/svg-icon-system-boilerplate) to generate a sprite of SVG's from individual source files. We can manipulate these with CSS and JS as required.
+
+The boilerplate hangs on [svg-sprite](https://github.com/jkphl/svg-sprite) which is really comprehensive.
+
+### Making SVG's
 
 1. Export the SVG from a graphics package as simple path or stroke data, combining as required.
 2. No text in icons please. If you do have a Glyph, outline the font.
 3. Clip the SVG to artboard so there are no borders or gaps from the edge
 4. Save icons to the source folder in `assets/icons/source`
-6. Run the gulp task `gulp build:icons` when you want to build icons. They out put to the `assets/icons/renders` folder.
+5. Run the gulp task `gulp build:icons` when you want to build icons. They output to the `assets/icons/renders` folder. Additionally, we pull a copy of the example page and spirte into our 'templates' folder, so we can reference the icons visually.
 
 
 # Starting a new project
@@ -43,4 +47,4 @@ What you should do to get started on a new project is the following:
 1. Pull this repo to where it's needed
 2. Delete the templates and public folders.
 2. Alter the gulpfile.js to out put css, js, and assets where you need them
-3. Remove the 'Test templates' section and related task runner from gulpfile.js (optional)
+3. Remove the 'test templates' section and related task runner from gulpfile.js (optional)

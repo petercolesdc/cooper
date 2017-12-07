@@ -120,7 +120,8 @@ var gulp            = require("gulp")
     // Task runners syntax
     // --------------------------
 
-    gulp.task("default", ["watch"])
+    // Just do a build
+    gulp.task("default", ["render"])
 
     // Spins up a sever to render test templates
     gulp.task("serve", ["watch-all", "browser-sync"])
