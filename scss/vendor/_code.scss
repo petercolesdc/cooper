@@ -1,4 +1,6 @@
 // Reset code / pre blocks to sensible defaults
+// ------------------------------------------------------
+
 pre {
   display: block;
   position: relative;
@@ -24,3 +26,6 @@ code {
     line-height: $lineheightBase;
   }
 }
+
+// Add code library markup here
+// ------------------------------------------------------

@@ -904,3 +904,40 @@ pre code {
             transform: translateX(-1px) rotate(0deg);
   }
 }
+
+.icon {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.iconBlock {
+  display: block;
+}
+
+.icon16 {
+  width: 16px;
+  height: 16px;
+}
+
+.icon24 {
+  width: 24px;
+  height: 24px;
+}
+
+.icon36 {
+  width: 36px;
+  height: 36px;
+}
+
+.icon_warning_svg {
+  fill: #FFBF47;
+}
+
+.icon_success_svg {
+  fill: #00823B;
+}
+
+.icon_error_svg {
+  fill: #B10E1E;
+}
