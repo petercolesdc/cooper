@@ -1,0 +1,435 @@
+/*! sanitize.css v5.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
+*, ::after, ::before {
+  background-repeat: no-repeat;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+::after, ::before {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: default;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+body {
+  margin: 0;
+}
+
+figcaption, figure, main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+nav ol, nav ul {
+  list-style: none;
+}
+
+pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: inherit;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+::-moz-selection {
+  background-color: #b3d4fc;
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #b3d4fc;
+  color: #000;
+  text-shadow: none;
+}
+
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg {
+  fill: currentColor;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+}
+
+button, input, select, textarea {
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+[type=reset], [type=submit], button, html [type=button] {
+  -webkit-appearance: button;
+}
+
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+[type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+[type=checkbox], [type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details, menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[tabindex], a, area, button, input, label, select, summary, textarea {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+[hidden] {
+  display: none;
+}
+
+[aria-busy=true] {
+  cursor: progress;
+}
+
+[aria-controls] {
+  cursor: pointer;
+}
+
+[aria-hidden=false][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
+  display: inherit;
+  position: absolute;
+}
+
+[aria-disabled] {
+  cursor: default;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, ul, ol, blockquote, pre, code {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul, ol {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+}
+
+.guide_index {
+  padding: 8rem 12rem;
+}
+
+.guide_index_list {
+  list-style-type: none;
+  padding: 1rem 4rem 1rem 5rem;
+  border-left: 3px solid #5c2d70;
+  margin-top: 4rem;
+}
+
+.guide_index_list li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.guide_index_list li:last-child {
+  margin-bottom: 4px;
+}
+
+.guide_h1 {
+  font-size: 22px;
+  line-height: 29px;
+  margin-bottom: 22px;
+  color: #333;
+}
+
+.guide_swatches {
+  display: grid;
+  grid-template-columns: repeat(8, 100px);
+  grid-gap: 16px;
+  list-style-type: none;
+  margin-bottom: 10rem;
+}
+
+.guide_swatch {
+  display: block;
+  font-size: 13px;
+  line-height: 13px;
+  color: #333;
+}
+
+.guide_swatch_block {
+  height: 90px;
+  width: 100%;
+  display: block;
+  margin-bottom: 7px;
+}
+
+.guide_swatch_meta, .guide_swatch:after {
+  display: block;
+  margin-top: 7px;
+}
+
+.guide_swatchByers .guide_swatch_block {
+  background-color: #491D5D;
+}
+
+.guide_swatchByers:after {
+  content: "#491D5D";
+}
+
+.guide_swatchHenderson .guide_swatch_block {
+  background-color: #5c2d70;
+}
+
+.guide_swatchHenderson:after {
+  content: "#5c2d70";
+}
+
+.guide_swatchWheeler .guide_swatch_block {
+  background-color: #21F9EE;
+}
+
+.guide_swatchWheeler:after {
+  content: "#21F9EE";
+}
+
+.guide_swatchEleven .guide_swatch_block {
+  background-color: #ff0062;
+}
+
+.guide_swatchEleven:after {
+  content: "#ff0062";
+}
+
+.guide_swatchHopper .guide_swatch_block {
+  background-color: #00FF7C;
+}
+
+.guide_swatchHopper:after {
+  content: "#00FF7C";
+}
+
+.guide_swatchSinclair .guide_swatch_block {
+  background-color: #db94e0;
+}
+
+.guide_swatchSinclair:after {
+  content: "#db94e0";
+}
+
+.guide_swatchMayfield .guide_swatch_block {
+  background-color: #f4c7b8;
+}
+
+.guide_swatchMayfield:after {
+  content: "#f4c7b8";
+}
+
+.guide_swatchHarrington .guide_swatch_block {
+  background-color: #2E1A35;
+}
+
+.guide_swatchHarrington:after {
+  content: "#2E1A35";
+}
+
+.guide_swatchHolland .guide_swatch_block {
+  background-color: #948C98;
+}
+
+.guide_swatchHolland:after {
+  content: "#948C98";
+}
+
+.guide_swatchHawkins .guide_swatch_block {
+  background-color: #e4e1e1;
+}
+
+.guide_swatchHawkins:after {
+  content: "#e4e1e1";
+}
+
+.guide_swatchHargrove .guide_swatch_block {
+  background-color: #F8F7F7;
+}
+
+.guide_swatchHargrove:after {
+  content: "#F8F7F7";
+}

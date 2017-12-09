@@ -626,56 +626,6 @@ a[href^="tel"] {
   src: local(".SFNSText-BoldItalic"), local(".HelveticaNeueDeskInterface-BoldItalic"), local(".LucidaGrandeUI"), local("Segoe UI Bold Italic"), local("Ubuntu Bold Italic"), local("Roboto-BoldItalic"), local("DroidSans-Bold"), local("Tahoma Bold");
 }
 
-.docs:after {
-  content: "";
-  display: table;
-  clear: both;
-  *zoom: 1;
-}
-
-@supports (display: grid) {
-  .docs {
-    display: grid;
-    grid-template-areas: "aside body";
-    grid-template-columns: 365px 1fr;
-  }
-}
-
-.docs_aside {
-  grid-area: aside;
-  background-color: #eee;
-  min-height: 100vh;
-  width: 365px;
-  float: left;
-}
-
-@supports (display: grid) {
-  .docs_aside {
-    width: auto;
-    float: none;
-  }
-}
-
-.docs_aside .menu {
-  padding: 40px;
-}
-
-.docs_body {
-  grid-area: body;
-  padding: 40px 40px 40px 17.5%;
-  width: calc(100% - 365px);
-}
-
-@supports (display: grid) {
-  .docs_body {
-    width: auto;
-  }
-}
-
-.docs_body .typebase {
-  max-width: 665px;
-}
-
 .row {
   margin-left: auto;
   margin-right: auto;
