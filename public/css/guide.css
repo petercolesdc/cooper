@@ -327,25 +327,6 @@ button {
   margin-bottom: 10rem;
 }
 
-.guide_swatch {
-  display: block;
-  font-size: 13px;
-  line-height: 13px;
-  color: #333;
-}
-
-.guide_swatch_block {
-  height: 90px;
-  width: 100%;
-  display: block;
-  margin-bottom: 7px;
-}
-
-.guide_swatch_meta, .guide_swatch:after {
-  display: block;
-  margin-top: 7px;
-}
-
 .guide_swatchByers .guide_swatch_block {
   background-color: #491D5D;
 }
@@ -432,4 +413,23 @@ button {
 
 .guide_swatchHargrove:after {
   content: "#F8F7F7";
+}
+
+.guide_swatch {
+  display: block;
+  font-size: 13px;
+  line-height: 13px;
+  color: #333;
+}
+
+.guide_swatch_block {
+  height: 90px;
+  width: 100%;
+  display: block;
+  margin-bottom: 7px;
+}
+
+.guide_swatch_meta, .guide_swatch:after {
+  display: block;
+  margin-top: 7px;
 }
