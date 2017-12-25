@@ -1,0 +1,17 @@
+.guide {
+  position: relative;
+}
+
+.guide_body {
+  width: calc(100% - 350px);
+  margin-left: 250px;
+}
+
+.guide_menu {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 0;
+  padding: 30px;
+  width: 250px;
+}

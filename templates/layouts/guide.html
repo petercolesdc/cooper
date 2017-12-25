@@ -1,15 +1,10 @@
-
-
+{% set global_styles = "/css" %}
+{% set global_assets = "/assets" %}
 <!doctype html>
 <html lang="en-GB" class="">
 <head>
-  <title>Style guide</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"><html>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="stylesheet" href="/css/style.css">
-
-  <link rel="stylesheet" href="/css/guide.css">
+  {% include 'layouts/partials/head.html' %}
+  <link rel="stylesheet" href="{{ global_styles }}/guide.css">
 <body>
 <div class="guide">
   <aside class="guide_menu">
@@ -21,12 +16,11 @@
     </nav>
   </aside>
   <main class="guide_body">
-  
-  
-
+  {% block content %}
+  {% endblock %}
   </main>
 </div>
 </body>
-
-
+{% block footer_after %}
+{% endblock %}
 </html>

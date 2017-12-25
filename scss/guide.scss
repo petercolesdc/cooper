@@ -1,0 +1,18 @@
+
+$guideAside:  250px;
+$guideAsideBuffer : $guideAside + 100px;
+
+.guide {
+  position: relative;
+  &_body {
+    width: calc(100% - #{$guideAsideBuffer});
+    margin-left: $guideAside;
+  }
+  &_menu {
+    position: sticky;
+    left: 0;
+    top: 0;
+    padding: 30px;
+    width: $guideAside;
+  }
+}
