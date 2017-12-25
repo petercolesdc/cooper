@@ -1,17 +1,9 @@
-
-@import "shared/color"; // Need to import shared colours explicitly
-
 // Assign colours from variables in shared/color.scss
 // ------------------------------------------------------------------
-
 
 // Roles
 $dmPrime: 					#005EA5;
 $dmPrimeAccent: 		#00823B;
-$dmSecondary:       #006435;
-$dmSecondaryAccent: #FFBF47;
-$dmTertiary:        #28A197;
-$dmTertiaryAccent:  #D53880;
 
 // Actions
 $dmAction: 					#005EA5;
@@ -29,14 +21,6 @@ $dmScrollbar: 			#2B8CC4;
 $dmError: 					#B10E1E;
 $dmSuccess: 				#00823B;
 $dmAlert: 					#FFBF47;
-
-// Opacity
-$dmOPa: 5%;
-$dmOPb: 15%;
-$dmOPc: 30%;
-$dmOPd: 50%;
-$dmOPe: 75%;
-$dmOPf: 90%;
 
 // Shades
 // usage e.g: color: shade(example, light);

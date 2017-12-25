@@ -15,20 +15,14 @@ body {
 a {
   color: $dmAction;
   text-decoration: none;
-  &:not(.button) {
-    background-image: linear-gradient(
-      to top,
-      rgba($dmAction, 0) 3%,
-      rgba($dmAction, 0.2) 3%,
-      rgba($dmAction, 0.2) 14%,
-      rgba($dmAction, 0) 14%
-    );
-  }
   @include link-active-styles {
-    &:not(.button) {
 
-    }
   }
+}
+
+*::selection {
+  background-color: #ddd;
+  color: $dmText;
 }
 
 // SVG bug work aroud whereby svg's require a height of some kind
@@ -36,9 +30,35 @@ svg {
 	max-height: 10000px;
 }
 
-
 // Overide iOS telephone styling on links
 a[href^="tel"] {
   color: inherit;
   text-decoration: none;
+}
+
+// Max with utl class
+.max_width {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Full width utl class
+.full_width {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+strong, b {
+  font-weight: $fontBold;
+	@include sharp-text;
+}
+
+em, i {
+  font-style: normal;
+}
+
+input, textarea, select, button {
+  font-family: $fontDefault;
 }

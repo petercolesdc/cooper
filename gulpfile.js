@@ -7,7 +7,8 @@ var gulp            = require("gulp")
     nunjucksRender  = require("gulp-nunjucks-render")
     browserSync     = require("browser-sync").create()
     plumber         = require("gulp-plumber")
-    svgSprite       = require('gulp-svg-sprite')
+    svgSprite       = require("gulp-svg-sprite")
+    prettyUrl       = require("gulp-pretty-url");
 
     // --------------------------------
 
@@ -33,13 +34,6 @@ var gulp            = require("gulp")
       gulp.src("assets/**/*")
         .pipe(plumber())
         .pipe(gulp.dest("public/assets/"))
-    })
-
-    // Watch asset folders for changes
-    gulp.task("watch", ["scss", "js", "assets"], function () {
-      gulp.watch("js/**/*", ["js"])
-      gulp.watch("scss/**/*", ["scss"])
-      gulp.watch("assets/**/*", ["assets"])
     })
 
     // SVG Config
@@ -76,8 +70,6 @@ var gulp            = require("gulp")
 
     gulp.task('sprite-shortcut', function() {
       gulp.src('assets/icons/renders/*')
-        .pipe(plumber())
-        .pipe(gulp.dest('templates/'));
     });
 
 
@@ -87,18 +79,19 @@ var gulp            = require("gulp")
 
     // Render templates
     gulp.task("render", function () {
-      gulp.src("templates/*")
+      gulp.src("templates/*.html")
         .pipe(plumber())
         .pipe(nunjucksRender(
           {
             path: "templates",
-            inheritExtension: true,
+            inheritExtension: false,
           }))
+        .pipe(prettyUrl())
         .pipe(gulp.dest("public"))
     })
 
     // Watch more things
-    gulp.task("watch-all", ["scss", "js", "assets", "render"], function () {
+    gulp.task("watch", ["scss", "js", "assets", "render"], function () {
       gulp.watch("js/**/*", ["js"])
       gulp.watch("scss/**/*", ["scss"])
       gulp.watch("assets/**/*", ["assets"])
@@ -124,7 +117,7 @@ var gulp            = require("gulp")
     gulp.task("default", ["render"])
 
     // Spins up a sever to render test templates
-    gulp.task("serve", ["watch-all", "browser-sync"])
+    gulp.task("serve", ["watch", "browser-sync"])
 
     // Icon Build
-    gulp.task('icons:build', ['sprite-page', 'sprite-shortcut']);
+    gulp.task('icons', ['sprite-page']);

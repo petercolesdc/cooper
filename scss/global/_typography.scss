@@ -12,7 +12,19 @@
 // ------------------------------------------------------------------
 
 %kernTight 	{ letter-spacing: -0.125rem; font-kerning: normal; }
-%kernLoose 	{ letter-spacing: 0.2rem; }
+%kernLoose 	{ letter-spacing: 0.4rem; }
+
+
+// Heading styles
+// ------------------------------------------------------------------
+
+.heading {
+	display: block;
+	font-family: $fontVoice;
+	font-weight: $fontSemiBold;
+	color: $dmHeadings;
+}
+
 
 // Typescale
 // ------------------------------------------------------------------
@@ -21,39 +33,52 @@
 	@extend %typebaseRoot;
 	@extend %kernTight;
 	font-size: rem($typeMasthead);
-	@include leading_adjust(8);
+	@include leading_adjust(10);
+	font-family: $fontVoice;
+	font-weight: $fontSemiBold;
 }
 
 .typeHeadline {
 	@extend %typebaseRoot;
 	@extend %kernTight;
 	font-size: rem($typeHeadline);
-	@include leading_adjust(8);
+	@include leading_adjust(10);
+	font-family: $fontVoice;
+	font-weight: $fontSemiBold;
 }
 
 .typeByline {
 	@extend %typebaseRoot;
-	@extend %kernTight;
 	font-size: rem($typeByline);
-	@include leading_adjust(6);
+	@include leading_adjust(8);
+	font-family: $fontVoice;
+	font-weight: $fontSemiBold;
 }
 
 .typeXL {
 	@extend %typebaseRoot;
 	font-size: rem($typeXL);
-	@include leading_adjust(6);
+	@include leading_adjust(8);
+	font-family: $fontVoice;
+	font-weight: $fontSemiBold;
 }
 
 .typeL {
 	@extend %typebaseRoot;
 	font-size: rem($typeL);
-	@include leading_adjust(6);
+	@include leading_adjust(8);
+	&.heading {
+		font-weight: $fontBold;
+	}
 }
 
 .typeM {
 	@extend %typebaseRoot;
 	font-size: rem($typeM);
-	@include leading_adjust(6);
+	@include leading_adjust(8);
+	&.heading {
+		font-weight: $fontBold;
+	}
 }
 
 // Median
@@ -63,6 +88,7 @@
 	// Only tighten leading if heading
 	&.heading {
 		@include leading_adjust(4);
+		font-weight: $fontBold;
 	}
 }
 
@@ -72,6 +98,10 @@
 	// Only tighten leading if heading
 	&.heading {
 		@include leading_adjust(4);
+		font-family: $fontContrast;
+		font-weight: $fontBold;
+		@extend %kernLoose;
+		text-transform: uppercase;
 	}
 }
 
@@ -81,16 +111,11 @@
 	// Only tighten leading if heading
 	&.heading {
 		@include leading_adjust(2);
+		font-family: $fontContrast;
+		font-weight: $fontBold;
+		@extend %kernLoose;
+		text-transform: uppercase;
 	}
-}
-
-// Heading styles
-// ------------------------------------------------------------------
-
-.heading {
-	display: block;
-	font-weight: $fontBold;
-	color: $dmHeadings;
 }
 
 // Default text
@@ -98,7 +123,7 @@
 
 .text {
 	@extend %typebaseRoot;
-	font-size: $typeDefault;
+	font-size: rem($typeDefault);
 }
 
 // Default lists
@@ -179,13 +204,9 @@
 	}
 	h5 {
 		@extend .typeS;
-		@extend %kernLoose;
-		text-transform: uppercase;
 	}
 	h6 {
 		@extend .typeXS;
-		@extend %kernLoose;
-		text-transform: uppercase;
 	}
 
 	// Remove next para or list top margin

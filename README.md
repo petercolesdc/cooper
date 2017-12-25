@@ -33,7 +33,7 @@ The boilerplate hangs on [svg-sprite](https://github.com/jkphl/svg-sprite) which
 2. No text in icons please. If you do have a Glyph, outline the font.
 3. Clip the SVG to artboard so there are no borders or gaps from the edge
 4. Save icons to the source folder in `assets/icons/source`
-5. Run the gulp task `gulp build:icons` when you want to build icons. They output to the `assets/icons/renders` folder. Additionally, we pull a copy of the example page and spirte into our 'templates' folder, so we can reference the icons visually.
+5. Run the gulp task `gulp icons` when you want to build icons. They output to the `assets/icons/renders` folder. Additionally, we pull a copy of the example page and spirte into our 'templates' folder, so we can reference the icons visually.
 
 
 # Starting a new project
