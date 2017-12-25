@@ -79,7 +79,7 @@ var gulp            = require("gulp")
 
     // Render templates
     gulp.task("render", function () {
-      gulp.src("templates/*.html")
+      gulp.src("templates/**/*.html")
         .pipe(plumber())
         .pipe(nunjucksRender(
           {
