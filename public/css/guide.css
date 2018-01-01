@@ -1,17 +1,45 @@
 .guide {
   position: relative;
+  display: grid;
+  grid-template-areas: "aside main";
+  grid-template-columns: 250px 1fr;
 }
 
 .guide_body {
-  width: calc(100% - 350px);
-  margin-left: 250px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 80px;
 }
 
 .guide_menu {
-  position: -webkit-sticky;
-  position: sticky;
-  left: 0;
-  top: 0;
-  padding: 30px;
+  padding: 80px 30px 30px 30px;
   width: 250px;
+  border-right: 1px solid #ddd;
+  min-height: 100vh;
+}
+
+.guide_menu ul {
+  position: fixed;
+}
+
+.guide_menu li {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.guide_menu li a {
+  display: block;
+}
+
+.guidesection {
+  border-top: 2px solid #ddd;
+  margin-top: 80px;
+  padding-top: 78px;
+}
+
+.guidesection:first-of-type {
+  border-top: 0;
+  margin-top: 0;
 }

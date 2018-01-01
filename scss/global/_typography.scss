@@ -88,7 +88,10 @@
 	// Only tighten leading if heading
 	&.heading {
 		@include leading_adjust(4);
+		font-family: $fontContrast;
 		font-weight: $fontBold;
+		@extend %kernLoose;
+		text-transform: uppercase;
 	}
 }
 
@@ -203,10 +206,10 @@
 		@extend .typeM;
 	}
 	h5 {
-		@extend .typeS;
+		@extend .typeMe;
 	}
 	h6 {
-		@extend .typeXS;
+		@extend .typeS;
 	}
 
 	// Remove next para or list top margin

@@ -1,12 +1,18 @@
 {% set global_styles = "/css" %}
 {% set global_assets = "/assets" %}
+{% set global_js = "/js" %}
+
 <!doctype html>
 <html lang="en-GB" class="">
 <head>
   {% include 'layouts/partials/head.html' %}
 <body>
+<div id="barba-wrapper">
+<div class="barba-container">
 {% block content %}
 {% endblock %}
+</div>
+</div>
 </body>
 {% block footer_after %}
 {% endblock %}

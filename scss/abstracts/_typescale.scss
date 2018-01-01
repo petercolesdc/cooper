@@ -2,24 +2,24 @@
 // Type scale
 // ------------------------------------------------------------------
 
-$scaleRoot: 				12;
-$lineheightRoot: 		23;
+$scaleRoot: 				10;
+$lineheightRoot: 		20;
 $lineheightBase: 		$lineheightRoot / $scaleRoot;
 
-$typeXL: 						$scaleRoot*4.8;
-$typeL: 						$scaleRoot*4.3;
+$typeXL: 						$scaleRoot*4;
+$typeL: 						$scaleRoot*3.6;
 $typeM:							$scaleRoot*3.0;
-$typeMe:						$scaleRoot*1.5;		// Me = 'median'. Generally the standard font size for the page
-$typeS: 						$scaleRoot*1.4;
-$typeXS: 						$scaleRoot*1.2;
+$typeMe:						$scaleRoot*1.7;		// Me = 'median'. Generally the standard font size for the page
+$typeS: 						$scaleRoot*1.5;
+$typeXS: 						$scaleRoot*1.3;
 
 // Declaritives
 $typeDefault: 			$typeMe;
 
 // Fringe sizes
-$typeMasthead:			$scaleRoot*7;
-$typeHeadline:			$scaleRoot*5.6;
-$typeByline:				$scaleRoot*4.8;
+$typeMasthead:			$scaleRoot*5;
+$typeHeadline:			$scaleRoot*4.6;
+$typeByline:				$scaleRoot*4.2;
 
 
 // Functions and mixins
